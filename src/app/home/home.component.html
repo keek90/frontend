@@ -1,0 +1,532 @@
+
+<title>ExpressD</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik+Microbe&display=swap" rel="stylesheet">
+<div data-bs-spy="scroll" data-bs-target="#navbar-example2" tabindex="0">
+
+  <!-- Navigation Section Starts -->
+  <section id="navigation-bar" class="navigation position-absolute" style="background-color: aqua;">
+
+    <nav id="navbar-example2" class="navbar navbar-expand-lg ">
+
+      <div class="navigation container-fluid d-flex flex-wrap align-items-center my-8 pe-4 ps-5 ">
+
+        <div class="col-md-3 brand-logo">
+          <a href="index.html" class="d-inline-flex link-body-emphasis text-decoration-none">
+            <img src="assets/Deliver.png" alt="">
+          </a>
+        </div>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar2"
+          aria-controls="offcanvasNavbar2" aria-label="Toggle navigation"><!--<ion-icon
+            name="menu-outline"></ion-icon>--></button>
+
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar2"
+          aria-labelledby="offcanvasNavbar2Label">
+
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbar2Label">Menu</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+
+          <div class="offcanvas-body">
+            <ul class="navbar-nav align-items-center flex-grow-1">
+              <li class="nav-list mx-3">
+                <a routerLink="/home" class="nav-link active px-2">
+                  <h5> Home </h5>
+                </a>
+              </li>
+              <li class="nav-list mx-3">
+                <a href="#resources" class="nav-link px-2">
+                  <h5> About </h5>
+                </a>
+              </li>
+              <li class="nav-list mx-3">
+                <a href="#services" class="nav-link px-2">
+                  <h5> Services </h5>
+                </a>
+              </li>
+              <li class="nav-list mx-3">
+                <a class="link" href="#action" class="nav-link px-2">
+                  <h5>Book the parcel</h5>
+                </a>
+              </li>
+             
+              <li class="nav-list mx-3">
+                <a routerLink="/tracking" class="nav-link px-2">
+                  <h5> Contact </h5>
+                </a>
+              </li>
+             <!--<li class="nav-list mx-3">
+              <a routerLink="/login" class="nav-link px-2">
+                  <h5>Login</h5>
+                </a>
+              </li>-->
+              <li class="nav-list mx-3 dropdown text-center">
+                <a class="nav-link px-2 dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+                  aria-expanded="false">
+                 <!-- <h5> Pages <iconify-icon icon="ic:outline-arrow-drop-down"></iconify-icon> </h5>
+                 -->   </a>
+                <ul class="dropdown-menu">
+                  <li><a href="about.html" class="dropdown-item text-uppercase ">About <span
+                        class="badge bg-secondary">Pro</span></a></li>
+                  <li><a href="blog.html" class="dropdown-item text-uppercase ">Blog <span
+                        class="badge bg-secondary">Pro</span></a></li>
+                  <li><a href="blog-single.html" class="dropdown-item text-uppercase ">Blog-Single <span
+                        class="badge bg-secondary">Pro</span></a></li>
+                  <li><a href="services.html" class="dropdown-item text-uppercase ">Services <span
+                        class="badge bg-secondary">Pro</span></a></li>
+                  <li><a href="services-single.html" class="dropdown-item text-uppercase ">Service-Single
+                      <span class="badge bg-secondary">Pro</span></a></li>
+                  <li><a href="gallery.html" class="dropdown-item text-uppercase ">Gallery <span
+                        class="badge bg-secondary">Pro</span></a></li>
+                  <li><a href="pricing.html" class="dropdown-item text-uppercase ">Pricing <span
+                        class="badge bg-secondary">Pro</span></a></li>
+                  <li><a href="quote.html" class="dropdown-item text-uppercase ">Get a Quote <span
+                        class="badge bg-secondary">Pro</span></a></li>
+                  <li><a href="contact.html" class="dropdown-item text-uppercase ">Contact <span
+                        class="badge bg-secondary">Pro</span></a></li>
+                  <li><a href="team.html" class="dropdown-item text-uppercase ">Our Team <span
+                        class="badge bg-secondary">Pro</span></a></li>
+                  <li><a href="review.html" class="dropdown-item text-uppercase ">Reviews <span
+                        class="badge bg-secondary">Pro</span></a></li>
+                  <li><a href="faq.html" class="dropdown-item text-uppercase ">FAQs <span
+                        class="badge bg-secondary">Pro</span></a></li>
+                  <li><a href="styles.html" class="dropdown-item text-uppercase ">Styles <span
+                        class="badge bg-secondary">Pro</span></a></li>
+                </ul>
+              </li>
+              
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+    </nav>
+
+  </section>
+
+
+  <!--- Hero Section Starts -->
+  <section id="hero">
+    <div class="hero container py-5 my-5">
+      <div class="row flex-lg-row-reverse align-items-center g-5 mt-2 py-5">
+        <div class="col-10 col-sm-8 col-lg-6 py-md-5 my-md-5">
+          <img src="assets/scooter.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700"
+            height="500" loading="lazy">
+        </div>
+        <div class="col-lg-6 py-md-5 my-md-5">
+          <h1 class=" lh-1 mb-3" style="font-weight: bold;">ExpressD</h1>
+          <h1 class=" lh-1 mb-1" style="font-size: 50px;">Reliable Logistics</h1>
+          <h1 class=" lh-1 mb-1" style="font-size:50px;"> Seamless Solutions</h1>
+          <ul class="list-styled my-5">
+            <li class="my-2">
+              <h5>Easy booking </h5>
+            </li>
+            <li class="my-2">
+              <h5>Doorstep delivery </h5>
+            </li>
+            <li class="my-2">
+              <h5>Customer Support </h5>
+            </li>
+          </ul>
+          <div class="">
+           <!-- <a href="#" class="icon-link">
+              <button style="border: 1px solid #4CAF50;border-radius: 4px; color: #4CAF50;  transition: background-color 0.3s, color 0.3s, border-color 0.3s;font-size: 14px;  padding: 8px 16px;font-weight: bold;"> Get Started</button>
+            </a>-->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Feature Section Starts -->
+  <section id="features">
+    <div id="resources" class="container py-5 my-5">
+
+      <div class="row row-cols-1 row-cols-md-2 align-items-md-center gx-5 py-5">
+        <div class="col-md-7 d-flex flex-column align-items-start">
+          <h1 class="" style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5)">Go global with ease</h1>
+          <p class="feature-paragraph my-5">We simplify your logistics, while plugging your company into a world of
+            opportunities. We believe every company deserves to feel the excitement of going global, regardless of size.
+          </p>
+          <a routerLink="\about" class="btn btn-outline-primary second-button" style=" border: 1px solid #4CAF50;">Read More</a>
+        </div>
+
+        <div class="col-md-5" >
+          <div class="row flex-column g-4 mt-3" >
+            <div class="feature-post py-2 px-5" style="background-color: lightblue;box-shadow: 0 0.5px 0.5px rgba(0, 0, 200, 0.5);border-radius: 4px;">
+              <h4 class="py-3" style="font-weight: bold;font-style: italic;">Easy booking, multiple services</h4>
+              <p>We specialize in simplifying your courier needs. Our user-friendly platform allows you to book multiple services effortlessly. Whether it's same-day deliveries, international shipments, or document handling, we've got you covered.</p>
+            </div>
+
+            <div class="feature-post py-2 px-5" style="background-color: lightblue; box-shadow: 0 0.5px 0.5px rgba(0, 0, 200, 0.5);border-radius: 4px;">
+              <h4 class="py-3"  style="font-weight: bold;font-style: italic;">One place to manage all your shipments</h4>
+              <p>Streamline your shipping with our all-in-one courier service website. From parcel tracking to scheduling pickups, our platform offers comprehensive shipment management tools, ensuring your packages reach their destination efficiently and securely.</p>
+            </div>
+
+            <div class="feature-post py-2 px-5" style="background-color: lightblue;  box-shadow: 0 0.5px 0.5px rgba(0, 0, 255, 0.5);border-radius: 4px;">
+              <h4 class="py-3" style="font-weight: bold;font-style: italic;">Giving you clear visibility</h4>
+              <p> We facilitates the efficient delivery of parcels and packages from one location to another. Users can schedule pickups, track shipments in real-time, calculate shipping costs, and access customer support, streamlining the logistics process for businesses and individuals."
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section Starts -->
+  <section id="services" class="my-5">
+    <div class="container ">
+      <h1 class="text-center my-5">Our Services</h1>
+      <div class="row py-5">
+        <div class="col-md-3">
+          <div class="service-post py-5 px-5" style="background-color: lightgray;height: 500px;">
+            <div class="feature-icon d-inline-flex align-items-center justify-content-center  fs-2 mb-3">
+              <img src="assets/van.png" alt="">
+            </div>
+            <h3 style="font-weight: bold;">Fast Transportation</h3>
+            <p>
+              At Fast Transportation, we understand the importance of timely and secure delivery 
+              for your packages.We provide you with a seamless experience for all your delivery needs</p>
+            <!--<a href="services-single.html" class="icon-link">More info </a>-->
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="service-post py-5 px-5" style="background-color: lightgray;height: 500px;">
+            <div class="feature-icon d-inline-flex align-items-center justify-content-center fs-2 mb-3">
+              <img src="assets/ship.png" alt="">
+            </div>
+            <h3 style="font-weight: bold;"> Real time Tracking</h3>
+            <p> Our Website typically features a  Real time tracking system that allows customers to 
+              monitor the status and location of their packages throughout the shipping process..</p>
+            <!--<a href="services-single.html" class="icon-link">More info </a>-->
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="service-post py-5 px-5" style="background-color: lightgray;height: 500px;">
+            <div class="feature-icon d-inline-flex align-items-center justify-content-center fs-2 mb-3">
+              <img src="assets/headset.png" alt="">
+            </div>
+            <h3 style="font-weight: bold;">Customs Services</h3>
+            <p> We aims to inform customers about the processes, regulations, and requirements involved when shipping goods internationally. </p>
+           <!-- <a href="services-single.html" class="icon-link">More info </a>-->
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="service-post py-5 px-5" style="background-color: lightgray;height: 500px;">
+            <div class="feature-icon d-inline-flex align-items-center justify-content-center fs-2 mb-3">
+              <img src="assets/rate.png" alt="">
+            </div>
+            <h3 style="font-weight: bold;">Monthly Rates</h3>
+            <p>Monthly rates usually entail basic Services,tracking,insurance coverage,
+              additional Services,volume discounts,flexible plans.</p>
+           <!-- <a href="services-single.html" class="icon-link">More info </a>-->
+          </div>
+        </div>
+      </div>
+      <div class="text-center">
+        <a href="services.html" class="btn btn-primary first-button my-5" style="border-radius: 2;border: #000 solid 1px;">Explore Services</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Articles Section Starts 
+  <section id="articles">
+    <div id="company" class="container pt-5 my-5">
+      <h1 class="text-center  my-5">Latest Articles</h1>
+      <div class="row g-4 py-5">
+        <div class="feature col-md-4">
+          <div class="artical-post">
+            <div class="feature-icon d-inline-flex align-items-center justify-content-center ">
+              <img src="assets/plane.png" alt="" class="img-fluid">
+            </div>
+            <div class="artical-content py-5 px-5 ">
+              <h3>Learn and stay updated with</h3>
+              <p>Lorem Ipsum is simply dummy text of the printing and typesetting Ipsum has been the industry's standard
+                dummy text ever since</p>
+              <a href="blog-single.html" class="icon-link">More info </a>
+            </div>
+          </div>
+        </div>
+        <div class="feature col-md-4">
+          <div class="artical-post">
+            <div class="feature-icon d-inline-flex align-items-center justify-content-center">
+              <img src="assets/box.png" alt="" class="img-fluid">
+            </div>
+            <div class="artical-content py-5 px-5 ">
+              <h3>Asia-Pacific shipping update</h3>
+              <p>Lorem Ipsum is simply dummy text of the printing and typesetting Ipsum has been the industry's standard
+                dummy text ever since</p>
+              <a href="blog-single.html" class="icon-link">More info </a>
+            </div>
+          </div>
+        </div>
+        <div class="feature col-md-4">
+          <div class="artical-post">
+            <div class="feature-icon d-inline-flex align-items-center justify-content-center">
+              <img src="assets/plane.png" alt="" class="img-fluid">
+            </div>
+            <div class="artical-content py-5 px-5 ">
+              <h3>Stay up to date with logistics</h3>
+              <p>Lorem Ipsum is simply dummy text of the printing and typesetting Ipsum has been the industry's standard
+                dummy text ever since</p>
+              <a href="blog-single.html" class="icon-link">More info </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="text-center">
+        <a href="blog.html" class="btn btn-primary first-button my-5">More Articles</a>
+      </div>
+
+    </div>
+  </section>-->
+
+  <!-- Client Section Starts
+  <section id="client">
+    <div class="container py-5 my-5" id="featured-3">
+      <h1 class="text-center my-5">What Our Client Say</h1>
+      <div class="swiper client-Swiper py-5">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="col client-section d-flex align-items-center p-3 ">
+              <img src="assets/person1.png" alt="">
+              <div class="client-name ps-4">
+                <h4>Ramen Maggie </h4>
+                <p>Seoul, South Korea</p>
+              </div>
+            </div>
+            <div class="client-description px-3 py-3">
+              <iconify-icon class="client-quote-icon" icon="bxs:quote-alt-left"></iconify-icon>
+              <h5>Thank you for your great service</h5>
+              <p>Lorem Ipsum is simply dummy text of the printing and typesetting Ipsum has been the industry's standard
+                dummy text ever since</p>
+            </div>
+          </div>
+          <div>
+            <div class="col client-section d-flex align-items-center p-3 ">
+              <img src="assets/person2.png" alt="">
+              <div class="client-name ps-4">
+                <h4>John D’souza </h4>
+                <p>New York, USA</p>
+              </div>
+            </div>
+            <div class="client-description px-3 py-3">
+              <iconify-icon class="client-quote-icon" icon="bxs:quote-alt-left"></iconify-icon>
+              <h5>Thank you for your great service</h5>
+              <p>Lorem Ipsum is simply dummy text of the printing and typesetting Ipsum has been the industry's standard
+                dummy text ever since</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="col client-section d-flex align-items-center p-3 ">
+              <img src="assets/person1.png" alt="">
+              <div class="client-name ps-4">
+                <h4>Karl Walter</h4>
+                <p>Munich, German</p>
+              </div>
+            </div>
+            <div class="client-description px-3 py-3">
+              <iconify-icon class="client-quote-icon" icon="bxs:quote-alt-left"></iconify-icon>
+              <h5>Thank you for your great service</h5>
+              <p>Lorem Ipsum is simply dummy text of the printing and typesetting Ipsum has been the industry's standard
+                dummy text ever since</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="col client-section d-flex align-items-center p-3 ">
+              <img src="assets/person2.png" alt="">
+              <div class="client-name ps-4">
+                <h4>Ramen Maggie </h4>
+                <p>Seoul, South Korea</p>
+              </div>
+            </div>
+            <div class="client-description px-3 py-3">
+            <iconify-icon class="client-quote-icon" icon="bxs:quote-alt-left"></iconify-icon>
+              <h5>Thank you for your great service</h5>
+              <p>Lorem Ipsum is simply dummy text of the printing and typesetting Ipsum has been the industry's standard
+                dummy text ever since</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="col client-section d-flex align-items-center p-3 ">
+              <img src="assets/person1.png" alt="">
+              <div class="client-name ps-4">
+                <h4>Ramen Maggie </h4>
+                <p>Seoul, South Korea</p>
+              </div>
+            </div>
+            <div class="client-description px-3 py-3">
+              <iconify-icon class="client-quote-icon" icon="bxs:quote-alt-left"></iconify-icon>
+              <h5>Thank you for your great service</h5>
+              <p>Lorem Ipsum is simply dummy text of the printing and typesetting Ipsum has been the industry's standard
+                dummy text ever since</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="col client-section d-flex align-items-center p-3 ">
+              <img src="assets/person2.png" alt="">
+              <div class="client-name ps-4">
+                <h4>Ramen Maggie </h4>
+                <p>Seoul, South Korea</p>
+              </div>
+            </div>
+            <div class="client-description px-3 py-3">
+             <iconify-icon class="client-quote-icon" icon="bxs:quote-alt-left"></iconify-icon>
+              <h5>Thank you for your great service</h5>
+              <p>Lorem Ipsum is simply dummy text of the printing and typesetting Ipsum has been the industry's standard
+                dummy text ever since</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="col client-section d-flex align-items-center p-3 ">
+              <img src="assets/person1.png" alt="">
+              <div class="client-name ps-4">
+                <h4>Ramen Maggie </h4>
+                <p>Seoul, South Korea</p>
+              </div>
+            </div>
+            <div class="client-description px-3 py-3">
+              <iconify-icon class="client-quote-icon" icon="bxs:quote-alt-left"></iconify-icon>
+              <h5>Thank you for your great service</h5>
+              <p>Lorem Ipsum is simply dummy text of the printing and typesetting Ipsum has been the industry's standard
+                dummy text ever since</p>
+            </div>
+          </div>
+
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+
+    </div>
+  </section>-->
+
+  <!-- Action Section Starts -->
+  <section id="action">
+    <div id="contact" class="container py-5 my-5">
+
+      <div class="row row-cols-1 row-cols-md-2 align-items-md-center g-5 py-5">
+        <div class="col-md-5 action-column1">
+          <div class="row flex-column py-1 px-5"  style="background-color: #f2f2f2; ">
+            <div class=" ms-3 mb-5 mt-5 ">
+              <h1 class="mt-2">2043</h1>
+              <h5>Active Customers</h5>
+            </div>
+
+            <div class=" ms-3 mb-5 ">
+              <h1>3298</h1>
+              <h5>Monthly Shipments</h5>
+            </div>
+
+            <div class=" ms-3 mb-5 ">
+              <h1>5 min</h1>
+              <h5 class="mb-2">To Book A Shipment</h5>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="col-md-7 action-column2 d-flex flex-column align-items-center py-7 px-7" style="background-color:#00ced1;">
+          <h1 class="action-heading text-center mt-5 py-2 px-5 " style="color: #fff;font-weight: 600;">Ready to book your shipment?</h1>
+          <p class="action-paragraph text-center my-5 px-5 ">Create an account to book. It only takes a few steps!</p>
+          <a  routerLink="/login"><button type="button" class="btn btn-primary first-button action-button  my-5"
+            style="font-size: 20px;border-radius: 4 px;background-color: white;font-weight: 600;color: #00ced1;">Register now</button></a>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section Starts -->
+  <section id="footer">
+    <div class="container footer-container py-5">
+      <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5  ">
+
+        <div class="col-md-3 ">
+          <h4 class="py-3">Shipping Information</h4>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-3"><a href="#" class="nav-link footer-1-link p-0 "> Shipping to United States </a>
+            </li>
+            <li class="nav-item mb-3"><a href="#" class="nav-link footer-1-link p-0 "> Shipping to The Netherlands </a>
+            </li>
+            <li class="nav-item mb-3"><a href="#" class="nav-link footer-1-link p-0 "> Shipping to United Kingdom </a>
+            </li>
+            <li class="nav-item mb-3"><a href="#" class="nav-link footer-1-link p-0 "> Shipping to Spain </a></li>
+            <li class="nav-item mb-3"><a href="#" class="nav-link footer-1-link p-0 "> Shipping to Germany </a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-3 ">
+          <h4 class="py-3">Knowledge Hub</h4>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-3"><a href="#" class="nav-link footer-1-link p-0 "> Logistics Know How </a></li>
+            <li class="nav-item mb-3"><a href="#" class="nav-link footer-1-link p-0 "> Logistics News </a></li>
+            <li class="nav-item mb-3"><a href="#" class="nav-link footer-1-link p-0 "> Local Solutions </a></li>
+            <li class="nav-item mb-3"><a href="#" class="nav-link footer-1-link p-0 "> Logistics Trends & Events </a>
+            </li>
+            <li class="nav-item mb-3"><a href="#" class="nav-link footer-1-link p-0 "> Customer Stories </a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-3 ">
+          <h4 class="py-3">Useful Links</h4>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-3"><a href="#" class="nav-link footer-1-link p-0 "> Contact </a></li>
+            <li class="nav-item mb-3"><a href="#" class="nav-link footer-1-link p-0 "> Services </a></li>
+            <li class="nav-item mb-3"><a href="#" class="nav-link footer-1-link p-0 "> Terms and Conditions </a></li>
+            <li class="nav-item mb-3"><a href="#" class="nav-link footer-1-link p-0 "> Why Us </a></li>
+            <li class="nav-item mb-3"><a href="#" class="nav-link footer-1-link p-0 "> Careers </a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-3 ">
+          <h4 class="py-3">Contact</h4>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-3"><a href="#" class="nav-link footer-1-link p-0 "> Company Headquarter </a></li>
+            <li class="nav-item mb-3"><a href="#" class="nav-link footer-1-link p-0 "> United States of America </a>
+            </li>
+            <li class="nav-item mb-3"><a href="#" class="nav-link footer-1-link p-0 "> Ney York 10 </a></li>
+            <li class="nav-item mb-3"><a href="#" class="nav-link footer-1-link p-0 "> 2511 DP Den Haag </a></li>
+            <li class="nav-item mb-3"><a href="#" class="nav-link footer-1-link p-0 "> courie.com </a></li>
+          </ul>
+        </div>
+      </footer>
+    </div>
+
+
+
+  </section>
+
+  <section class="footer-2">
+    <footer class="container footer-2-container  d-flex align-items-center">
+      <div class="col-md-4 d-flex justify-content-center justify-content-md-start">
+        <p class="footer2-paragraph">© 2023 TemplatesJungle. All rights reserved.</p>
+      </div>
+
+    <!--  <div class="col-md-4 text-center">
+        <a href="https://templatesjungle.com/" class="text-decoration-none">
+          <iconify-icon class="footer-2-icon px-2" icon="ri:facebook-fill"></iconify-icon>
+        </a>
+        <a href="https://templatesjungle.com/" class="text-decoration-none">
+          <iconify-icon class="footer-2-icon px-2" icon="ri:twitter-fill"></iconify-icon>
+        </a>
+        <a href="https://templatesjungle.com/" class="text-decoration-none">
+          <iconify-icon class="footer-2-icon px-2" icon="ri:instagram-fill"></iconify-icon>
+        </a>
+      </div>-->
+
+     
+    </footer>
+  </section>
+
+
+
+  <!-- Scripts  Starts -->
+ 

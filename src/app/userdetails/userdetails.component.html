@@ -1,0 +1,237 @@
+<div class="container-fluid">
+    <div class="row flex-sm-nowrap">
+      <div class="col-auto col-sm-3 col-xl-2 bg-primary" style="width: 230px">
+        <div
+          class="d-flex flex-column align-items-sm-start px-3 pt-2 text-white min-vh-120"
+        >
+          <a
+            href="/"
+            class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none"
+          >
+            <span
+              class="ms-1 d-none d-sm-inline"
+              style="align-items: center; padding-left: 50px; margin-top: 20px"
+              >Menu</span
+            >
+          </a>
+          <ul
+            class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start"
+            id="menu"
+          >
+        
+            <li class="nav-item">
+              <a
+                href=""
+                routerLink="/"
+                data-bs-toggle="collapse"
+                class="nav-link px-0 align-items-sm-start"
+              >
+                <span class="side_pane"
+                  ><i class="icon fas fa-home"> </i>Home</span
+                >
+              </a>
+            </li>
+            
+             <li>
+              <a
+                href="" routerLink="/dashboard"
+                data-bs-toggle="collapse"
+                aria-expanded="false"
+                class="nav-link px-0 align-middle"
+              >
+                <span class="side_pane" style="padding-left: 30px"
+                  >Dashboard</span
+                >
+              </a>
+            </li>
+            <li>
+              <a
+                href="" routerLink="/userdetails"
+                data-toggle="collapse"
+                class="nav-link px-0 align-middle"
+              >
+                <span class="side_pane"
+                  ><i class="icon fas fa-plus"></i>Add Courier</span
+                ></a
+              >
+           <!--  <ul
+                class="collapse show nav flex-column ms-1"
+                id="submenu2"
+                data-bs-parent="#menu"
+              >
+                <li class="w-100">
+                  <a href="#" class="nav-link px-0">
+                    <span class="side_pane"
+                      ><i class="icon fas fa-plus"></i>Add Courier</span
+                    ></a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="nav-link px-0">
+                    <span class="side_pane"
+                      ><i class="icon fas solid fa-pen"></i>Update Courier</span
+                    ></a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="nav-link px-0">
+                    <span class="side_pane"
+                      ><i
+                        class="icon fas solid fa-trash"
+                        style="color: #ffffff"
+                      ></i
+                      >Delete Courier</span
+                    ></a
+                  >
+                </li>
+              </ul>-->
+            </li>
+          
+          <li>
+              <a
+                class="link"
+                href=""
+                routerLink="/track"
+                class="nav-link px-0 align-middle"
+              >
+                <span class="side_pane" style="padding-left: 30px"
+                  >Track Courier</span
+                >
+              </a>
+            </li>
+            <!--<li>
+              <a href="#" class="nav-link px-0 align-middle">
+                <span class="side_pane" style="padding-left: 30px">Payment</span>
+              </a>
+            </li>-->
+            <li>
+              <a href="#" class="nav-link px-0 align-middle" (click)="logout()">
+                <span class="side_pane" style="padding-left: 30px">Logout</span>
+              </a>
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+      <div class="contain">
+        <h2>New Parcel</h2>
+        <form [formGroup]="userForm" (submit)="onSubmit()">
+          <div class="row">
+            <div class="col-md-5">
+              <h3>Sender's Info</h3>
+              <div class="form-group">
+                <label class="form-label">Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Sender's Name"
+                  formControlName="sender_name"
+                />
+              </div>
+              <div class="form-group">
+                <label class="form-label">Address</label>
+                <textarea
+                  class="form-control"
+                  rows="4"
+                  placeholder="Sender's Address"
+                  formControlName="sender_address"
+                  
+                ></textarea>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Pincode</label>
+                <input
+                  type="text"
+                  pattern="[0-9]{6}"
+                  class="form-control"
+                  maxlength="6"
+                  id="pincode1"
+                  placeholder="685543"
+                  formControlName="pincode_sender"
+                 
+                />
+                <!-- @if(detailsform.get('pincode1')?.hasError('required') && detailsform.get('pincode1')?.touched){
+                              <div class="form-text text-danger">Pincode is required</div>
+                          }-->
+              </div>
+              <div class="form-group">
+                <label class="form-label">Email</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  placeholder="abc123@gmail.com"
+                  formControlName="sender_email"
+                  
+                />
+              </div>
+              <div class="form-group">
+                <label class="form-label">Contact No</label>
+                <input
+                  type="tel"
+                  class="form-control"
+                  placeholder="9563454576"
+                  formControlName="sender_contact"
+                  
+                />
+              </div>
+            </div>
+            <div class="col-md-5">
+              <h3>Receiver's Info</h3>
+              <div class="form-group">
+                <label class="form-label">Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Receiver's Name"
+                  formControlName="receiver_name"
+                />
+              </div>
+              <div class="form-group">
+                <label class="form-label">Address</label>
+                <textarea
+                  class="form-control"
+                  rows="4"
+                  placeholder="Receiver's Address"
+                  formControlName="receiver_address"
+                  
+                ></textarea>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Pincode</label>
+                <input
+                  type="text"
+                  pattern="[0-9]{6}"
+                  class="form-control"
+                  maxlength="6"
+                  id="pincode2"
+                  placeholder="685543"
+                  formControlName="pincode_receiver"
+                />
+                <!--@if(detailsform.get('pincode2')?.hasError('required') && detailsform.get('pincode2')?.touched){
+                              <div class="form-text text-danger">Pincode is required</div>
+                          }-->
+              </div>
+              <div class="form-group">
+                <label class="form-label">Email</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  placeholder="abc123@gmail.com"
+                  formControlName="receiver_email"
+                  
+                />
+              </div>
+              <div class="form-group">
+                <label class="form-label">Contact No</label>
+                <input type="tel" class="form-control" placeholder="9563454576" formControlName="receiver_contact" />
+              </div>
+            </div>
+          </div>
+          
+          <button class="btn btn-primary" type="submit" >
+            Save
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>

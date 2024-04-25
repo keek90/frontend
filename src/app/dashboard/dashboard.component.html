@@ -1,0 +1,49 @@
+<h1>Dashboard</h1>
+<div class="container" id="container">
+    <!-- Dummy data -->
+    @for(detail of details; track $index){
+    <div class="row" >
+        <div class="column">
+            <h2>Package ID</h2>
+            <p>{{detail.package_id}}</p>
+        </div>
+        <div class="column">
+            <h2>Sender Details</h2>
+            <p>Name: {{detail.sender_name}}</p>
+            <p>Email: {{detail.sender_email}}</p>
+            <p>Address: {{detail.sender_address}}</p>
+        </div>
+        <div class="column">
+            <h2>Receiver Details</h2>
+            <p>Name: {{detail.receiver_name}}</p>
+            <p>Email: {{detail.receiver_email}}</p>
+            <p>Address: {{detail.receiver_address}}</p>
+        </div>
+        <div class="column" style="display: flex; align-items: center; justify-content: center;">
+            
+            <div class="dropdown dropdown--scrollable "   >
+                
+                    
+                <select [(ngModel)]="selectedValues[$index]" style="background-color:#1e606e;color:white" (change)="onDropdownChange($event,detail.key!,this.selectedValues[$index])">
+                
+                   
+               
+                <option value="Booked">Booked</option>
+                <option value="Pickup">Pickup</option>
+                <option value="In_Transit">In Transit</option>
+                <option value="Out_for_Delivery">Out for Delivery</option>
+                <option value="Delivered">Delivered</option>
+          
+            </select>
+        
+        
+        
+              </div>
+            <button class="btn btn-sm btn-danger" (click)="removeExpense(detail.key!)">Remove</button>
+        </div>
+        </div>
+    }
+</div>
+
+    
+ 

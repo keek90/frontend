@@ -1,0 +1,9 @@
+{
+  "hosting": [
+    {
+      "target": "event",
+      "source": ".",
+      "frameworksBackend": {}
+    }
+  ]
+}

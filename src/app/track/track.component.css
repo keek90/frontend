@@ -1,0 +1,99 @@
+/* Adjusted and enhanced styles */
+
+/* Track order box */
+.track-order-box {
+    width: 80%;
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    background-color: #f9f9f9; /* Changed background color */
+}
+
+/* Heading */
+.track-order-box h2 {
+    margin-top: 0;
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Order number input */
+.track-id-input {
+    width: 60%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    transition: border-color 0.3s; 
+}
+
+.track-id-input:focus {
+    outline: none;
+    border-color: #007bff; /* Changed border color on focus */
+}
+
+.track-id-input::placeholder {
+    color: #999;
+}
+
+/* Track now button */
+.track-now-button {
+    width: 150px;
+    padding: 12px;
+    margin-left: 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.track-now-button:hover {
+    background-color: #0056b3; /* Changed button color on hover */
+}
+
+/* Stepper */
+.stepper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+}
+
+/* Step icon */
+.mat-step-header .mat-step-icon {
+    background-color: #ccc;
+    color: #fff;
+    border-radius: 50%; /* Added border radius */
+    font-size: 24px; /* Increased font size */
+    width: 40px; /* Increased icon size */
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Added box shadow */
+}
+
+/* Selected step icon */
+.mat-step-header .mat-step-icon-selected {
+    background-color: #4caf50;
+}
+
+/* Completed step icon */
+.mat-step-header .mat-step-icon-done {
+    background-color: #ccc;
+    color: #fff;
+}
+/*::ng-deep .mat-step-header .mat-step-icon-selected{
+    background-color:gray;
+}
+::ng-deep .mat-step-header .mat-step-label-selected{
+    color:grey !important;
+}*/

@@ -1,0 +1,21 @@
+{
+  "targets": {
+    "courier-service-manageme-891b4": {
+      "hosting": {
+        "event": [
+          "courier-service-manageme-891b4"
+        ]
+      }
+    },
+    "user-details-1b370": {
+      "hosting": {
+        "event": [
+          "user-details-1b370"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "user-details-1b370"
+  }
+}

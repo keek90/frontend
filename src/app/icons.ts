@@ -1,0 +1,1 @@
+import { IconModule } from '@visurel/iconify-angular';
