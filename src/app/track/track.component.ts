@@ -51,7 +51,7 @@ export class TrackComponent {
           this.steps.forEach(step => {
             if (data.trackdetails && data.trackdetails[step.label]) {
               //console.log(data.trackdetails[step.label]);
-              console.log(step);
+              //console.log(step);
               step.completed = true;
             }
           });

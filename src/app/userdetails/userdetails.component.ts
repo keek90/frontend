@@ -9,6 +9,8 @@ import { TrackComponent } from '../track/track.component';
 import { getAuth } from '@angular/fire/auth';
 import { signOut } from 'firebase/auth';
 import { AngularFireDatabase } from '@angular/fire/compat/database';
+import firebase from 'firebase/compat';
+import { AngularFireAuth } from '@angular/fire/compat/auth';
 @Component({
   selector: 'app-userdetails',
   standalone: true,
@@ -19,9 +21,11 @@ import { AngularFireDatabase } from '@angular/fire/compat/database';
 export class UserdetailsComponent implements OnInit{
   
  users: IUser[]=[];
-
+ showField: boolean = false;
 userForm!: FormGroup;
-constructor(private fb: FormBuilder,private userServices: UserService,private router: Router,private activatedRoute:ActivatedRoute,private dataService: DataService,private db:AngularFireDatabase){
+currentUserUid: string | null = null;
+
+constructor(private fb: FormBuilder,private userServices: UserService,private router: Router,private activatedRoute:ActivatedRoute,private dataService: DataService,private db:AngularFireDatabase,private afAuth: AngularFireAuth){
   let uid=localStorage.getItem('users');
    
   this.userForm = this.fb.group({
@@ -49,16 +53,19 @@ constructor(private fb: FormBuilder,private userServices: UserService,private ro
 }
 
 ngOnInit(): void {
-  throw new Error('Method not implemented.');
+ // throw new Error('Method not implemented.');
  
 }
+toggleField() {
+  this.showField = !this.showField;
+}
+
 onSubmit(){
   //if(this.userForm.valid){
     console.log(4)
       this.userServices.addDetail(this.userForm.value);
-      this.router.navigate(['/orderdetails']);
+      //this.router.navigate(['/orderdetails']);
       
-    
     //this.router.navigate(['/admin']);
  // }else{
     //console.log(2)

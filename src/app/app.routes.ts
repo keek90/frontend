@@ -6,11 +6,13 @@ import { UserdetailsComponent } from './userdetails/userdetails.component';
 import { TrackComponent } from './track/track.component';
 import { OrderdetailsComponent } from './orderdetails/orderdetails.component';
 import { AuthGuard } from './auth.guard';
+import { CheckoutComponent } from './checkout/checkout.component';
 export const routes: Routes = [
 {path: '',component:HomeComponent},
 {path: 'login',component:LoginComponent},
 {path: 'userdetails',component:UserdetailsComponent},
 {path: 'dashboard',component:DashboardComponent},
 {path:'track',component:TrackComponent},
-{path: 'orderdetails',component:OrderdetailsComponent}
+{path: 'orderdetails',component:OrderdetailsComponent},
+{path: 'checkout',component:CheckoutComponent}
 ];
