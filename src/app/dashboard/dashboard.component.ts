@@ -32,7 +32,7 @@ selectedItem: string|null=null;
    
   }
   editExpense(key:string){
-    console.log(key);
+   // console.log(key);
     //this.router.navigate(['/expense-form/' + key]);
    
   }
@@ -41,7 +41,7 @@ selectedItem: string|null=null;
     const selectedvalue = (event.target as HTMLSelectElement).value;
     
     // Perform actions based on the selected value
-    console.log('Selected value:', selectedvalue,key);
+   // console.log('Selected value:', selectedvalue,key);
     const field='status';
     const ItemRef = this.db.list('userdetails');
     /*if(this.selectedItem===itemid){
@@ -53,7 +53,7 @@ selectedItem: string|null=null;
     const currentUser=firebase.auth().currentUser;
     if(currentUser){
       const uid=currentUser.uid;
-      console.log(uid);
+     // console.log(uid);
       
      this.updatestatusfield(key,selectedValue);
     
@@ -66,7 +66,7 @@ selectedItem: string|null=null;
   
   updatestatusfield(key:string,selectedValue:string):Promise<void>{
   
-    console.log(selectedValue);
+    //console.log(selectedValue);
 
     return this.db.object(`userdetails/${key}/trackdetails`).update({ [selectedValue]: true });
   }

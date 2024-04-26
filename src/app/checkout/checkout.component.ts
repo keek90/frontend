@@ -21,16 +21,16 @@ export class CheckoutComponent implements OnInit{
       // User is not logged in, UID is null
       this.currentUserUid = null;
     }
-    console.log(this.currentUserUid);
+   // console.log(this.currentUserUid);
     this.db.list('userdetails').snapshotChanges().subscribe(snaps => {
       snaps.forEach(snap => {
         const key = snap.key;
         const data: any = snap.payload.val();
         if (data.user_uid === this.currentUserUid) {
-          console.log(key);
+         // console.log(key);
           // Order found, update step completion status
           
-          console.log(data.order_id);
+          //console.log(data.order_id);
           
             }
           });

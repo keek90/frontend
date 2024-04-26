@@ -44,14 +44,14 @@ export class OrderdetailsComponent implements OnInit{
       // User is not logged in, UID is null
       this.currentUserUid = null;
     }
-    console.log(this.currentUserUid);
+  //  console.log(this.currentUserUid);
     this.db.list('userdetails').snapshotChanges().subscribe(snaps => {
       this.orders = [];
       snaps.forEach(snap => {
         const key = snap.key;
         const data: any = snap.payload.val();
         if (data.user_uid === this.currentUserUid) {
-          console.log(key);
+         // console.log(key);
           const order: Order = {
             orderId: data.order_id,
             senderName: data.sender_name,

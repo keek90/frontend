@@ -58,7 +58,7 @@ export class TrackComponent {
         const key = snap.key;
         const data: any = snap.payload.val();
         if (data.order_id === orderNum) {
-          console.log(key);
+          //console.log(key);
           // Order found, update step completion status
           this.steps.forEach(step => {
             if (data.trackdetails && data.trackdetails[step.label]) {

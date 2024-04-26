@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { IUser } from '../core/models/common.model';
 import { FormBuilder, FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { UserService } from '../core/services/user.service';
@@ -27,7 +27,7 @@ userForm!: FormGroup;
 currentUserUid: string | null = null;
 userID:string|null="X7WBCBXa1iNT834yh7ON5ut9g972";
 dataToSend: any;
-
+auth=inject(AngularFireAuth);
 constructor(private fb: FormBuilder,private userServices: UserService,private router: Router,private activatedRoute:ActivatedRoute,private dataService: DataService,private db:AngularFireDatabase,private afAuth: AngularFireAuth){
   let uid=localStorage.getItem('users');
   this.orderId = this.generateorderID();
@@ -109,13 +109,16 @@ generateorderID():string {
 
   return dataToSend;
 }
-logout(){
-  /*const auth=getAuth();
-  signOut(auth).then(()=>{
-    this.router.navigateByUrl('/home');
-  }).catch((error)=>{
-      console.log('Error occured');
-  });*/
+onLogout(): void {
+  this.auth.signOut().then(() => {
+    // Remove the user token from local storage
+    localStorage.removeItem('users');
+    // Navigate to the login page
+    this.router.navigateByUrl('/login');
+  }).catch(error => {
+    // Handle logout error
+    //console.error('Logout error:', error);
+  });
 }
 
 }

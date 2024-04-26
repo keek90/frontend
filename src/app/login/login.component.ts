@@ -37,7 +37,7 @@ ngOnInit(): void {
     const { email, password } = this.form1.value;
     this.auth.signInWithEmailAndPassword(email, password)
         .then(response => {
-            console.log('hello', response.user?.uid);
+            //console.log('hello', response.user?.uid);
             let user = response.user?.uid;
             if (user) {
                 localStorage.setItem('users', user);
@@ -49,4 +49,5 @@ ngOnInit(): void {
      .catch(error=>{
      })  ;
   }
+  
 }

@@ -1,36 +1,21 @@
-// auth.guard.ts
-
 import { Injectable } from '@angular/core';
-import { ActivatedRouteSnapshot, CanActivate, Router, RouterStateSnapshot } from '@angular/router';
-import { AuthService } from './auth.service';
-import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators'; // Import map operator from 'rxjs/operators'
-import { AngularFireAuth } from '@angular/fire/compat/auth';
- // Import AngularFireAuth for authentication
+import { CanActivate, Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
 })
-export class AuthGuard  {
- /* constructor(
-    private authService: AuthService,
-    private router: Router,
-    private afAuth: AngularFireAuth// Inject AngularFireAuth
-  ) {}
+export class AuthGuard implements CanActivate {
+  constructor(private router: Router) {}
 
-  canActivate(
-    next: ActivatedRouteSnapshot,
-    state: RouterStateSnapshot
-  ): Observable<boolean> {
-    const expectedRole = next.data['expectedRole'];
-    return this.afAuth.authState.pipe(
-      map(user => {
-        if (!user || !this.authService.isLoggedIn()) {
-          this.router.navigate(['/login']);
-          return false;
-        }
-        return this.authService.getUserRole(user.uid) === expectedRole;
-      })
-    );
-  }*/
+  canActivate(): boolean {
+    const userToken = localStorage.getItem('users');
+    if (userToken) {
+      // User is logged in, allow access to route
+      return true;
+    } else {
+      // User is not logged in, redirect to login page
+      this.router.navigateByUrl('/login');
+      return false;
+    }
+  }
 }
