@@ -33,6 +33,7 @@ interface Order {
 export class OrderdetailsComponent implements OnInit{
   currentUserUid: string | null = null;
   orders: Order[] = [];
+  stat:string | null=null;
   constructor(private afAuth: AngularFireAuth,private db:AngularFireDatabase){}
  ngOnInit(): void {
   this.afAuth.authState.subscribe((user:any) => {
@@ -66,6 +67,7 @@ export class OrderdetailsComponent implements OnInit{
             // Add other properties as needed
           };
           this.orders.push(order);
+          this.stat='yes';
         }
           // Order found, update step completion status
         
@@ -75,6 +77,7 @@ export class OrderdetailsComponent implements OnInit{
           
     
           });
+          
         
       });
   }

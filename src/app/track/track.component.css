@@ -91,9 +91,14 @@
     background-color: #ccc;
     color: #fff;
 }
-/*::ng-deep .mat-step-header .mat-step-icon-selected{
-    background-color:gray;
+
+ .mat-step-header .mat-step-icon-selected ::after{
+     background-color: grey;
+}
+.mat-step-header .mat-step-label ::after{
+  background-color: grey !important;
+  font-size:15px !important;
 }
 ::ng-deep .mat-step-header .mat-step-label-selected{
-    color:grey !important;
-}*/
+    font-size: 15px !important;
+}

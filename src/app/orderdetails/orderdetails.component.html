@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" *ngIf="stat !== null">
   <div class="table-responsive">
       <table class="order-table">
           <thead>
@@ -33,4 +33,8 @@
           </tbody>
       </table>
   </div>
+</div>
+<div *ngIf="stat === null">
+  <!-- Add your HTML content to display when stat is null -->
+  <p>Loading...</p>
 </div>

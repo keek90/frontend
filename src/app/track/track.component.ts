@@ -8,6 +8,8 @@ import { Router } from '@angular/router';
 import { IUser } from '../core/models/common.model';
 import { Observable, forkJoin, of } from 'rxjs';
 import { map, switchMap } from 'rxjs/operators';
+import { CommonModule } from '@angular/common';
+import { STEPPER_GLOBAL_OPTIONS } from '@angular/cdk/stepper';
 export interface Step {
   label: string;
   completed: boolean;
@@ -15,17 +17,26 @@ export interface Step {
 @Component({
   selector: 'app-track',
   standalone: true,
-  imports: [MatStepperModule,MatIconModule],
+  imports: [MatStepperModule,MatIconModule,CommonModule],
   templateUrl: './track.component.html',
-  styleUrl: './track.component.css'
+  styleUrl: './track.component.css',
+  providers:[
+    {
+      provide:STEPPER_GLOBAL_OPTIONS,
+      useValue:{
+        displayDefaultIndicatorType:false
+      }
+    }
+  ]
+
 })
 
 export class TrackComponent {
+  isOrderTrackingStarted = false;
+
+  [x: string]: any;
   details: IUser[]=[];
   constructor(private userService:UserService, private router:Router,private db:AngularFireDatabase){
-    
-    
-   
   }
   steps: Step[] = [
     
@@ -38,6 +49,7 @@ export class TrackComponent {
 
 
   trackOrder(orderNum:string):void {
+    this.isOrderTrackingStarted = true;
     this.steps.forEach(step => step.completed = false);
 
     // Fetch order details from Firebase

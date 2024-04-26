@@ -6,6 +6,7 @@ import { UserdetailsComponent } from './userdetails/userdetails.component';
 import { TrackComponent } from './track/track.component';
 import { OrderdetailsComponent } from './orderdetails/orderdetails.component';
 import { AuthGuard } from './auth.guard';
+import { RegisterComponent } from './register/register.component';
 
 export const routes: Routes = [
 {path: '',component:HomeComponent},
@@ -14,5 +15,5 @@ export const routes: Routes = [
 {path: 'dashboard',component:DashboardComponent},
 {path:'track',component:TrackComponent},
 {path: 'orderdetails',component:OrderdetailsComponent},
-
+{path:'register',component:RegisterComponent},
 ];

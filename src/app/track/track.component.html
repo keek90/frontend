@@ -2,18 +2,29 @@
     <h2>TRACK ORDER</h2>
     <input type="text" id="orderNum" class="track-id-input" placeholder="Enter Order Number" #orderNum>
     <button id="track-btn" class="track-now-button" (click)="trackOrder(orderNum.value)">Track Now</button>
-    <div>
+    <div class="step" *ngIf="isOrderTrackingStarted" style="pointer-events: none;">
         
        
             <mat-horizontal-stepper labelPosition="bottom" linear>
                 @for(step of steps; track $index){
                 <mat-step  label={{step.label}} completed={{step.completed}}>
+                    @if($index===1){
+
                     <ng-template matStepIcon>
                         <mat-icon>done</mat-icon>
                     </ng-template>
-                    <p>{{step.label}}</p>
-                </mat-step>
+                    
             }
+            @else
+                {
+                    <ng-template matStepperIcon="edit" >
+                        <mat-icon >done</mat-icon>
+                    </ng-template> 
+                }
+                    <p>{{ step.label }}</p>
+                </mat-step>
+                }
+
             </mat-horizontal-stepper>
         
         <!-- Your content here -->

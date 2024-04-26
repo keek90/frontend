@@ -25,6 +25,7 @@ export class UserdetailsComponent implements OnInit{
  showField: boolean = false;
 userForm!: FormGroup;
 currentUserUid: string | null = null;
+userID:string|null="X7WBCBXa1iNT834yh7ON5ut9g972";
 dataToSend: any;
 
 constructor(private fb: FormBuilder,private userServices: UserService,private router: Router,private activatedRoute:ActivatedRoute,private dataService: DataService,private db:AngularFireDatabase,private afAuth: AngularFireAuth){
@@ -68,7 +69,15 @@ CloseModel(){
 }
 ngOnInit(): void {
  // throw new Error('Method not implemented.');
- 
+ this.afAuth.authState.subscribe((user:any) => {
+  if (user) {
+    // User is logged in, retrieve UID
+    this.currentUserUid = user.uid;
+  } else {
+    // User is not logged in, UID is null
+    this.currentUserUid = null;
+  }
+});
 }
 toggleField() {
   this.showField = !this.showField;
