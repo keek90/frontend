@@ -4,7 +4,7 @@ import { MatIconModule } from '@angular/material/icon';
 import firebase from 'firebase/compat/app';
 import { AngularFireDatabase } from '@angular/fire/compat/database';
 import { UserService } from '../core/services/user.service';
-import { Router } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { IUser } from '../core/models/common.model';
 import { Observable, forkJoin, of } from 'rxjs';
 import { map, switchMap } from 'rxjs/operators';
@@ -17,7 +17,7 @@ export interface Step {
 @Component({
   selector: 'app-track',
   standalone: true,
-  imports: [MatStepperModule,MatIconModule,CommonModule],
+  imports: [MatStepperModule,MatIconModule,CommonModule,RouterModule],
   templateUrl: './track.component.html',
   styleUrl: './track.component.css',
   providers:[

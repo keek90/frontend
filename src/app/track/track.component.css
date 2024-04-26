@@ -102,3 +102,26 @@
 ::ng-deep .mat-step-header .mat-step-label-selected{
     font-size: 15px !important;
 }
+.expressd-header {
+    text-align: center;
+    background-color: lightblue;
+    padding: 20px;
+    margin-bottom: 50px; /* Increase margin bottom for spacing */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+}
+
+.expressd-header h1 {
+    font-size: 50px;
+    margin: 0;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.expressd-header h3 {
+    font-size: 20px;
+    margin: 10px 0 0;
+    font-weight: normal;
+    color: #333
+    ;
+}
