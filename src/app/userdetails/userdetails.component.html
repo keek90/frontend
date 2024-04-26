@@ -47,7 +47,7 @@
             <li>
               
               <a
-                href="" routerLink="/checkout"
+                routerLink="/orderdetails"
                 data-toggle="collapse"
                 class="nav-link px-0 align-middle"
               >
@@ -231,10 +231,33 @@
             </div>
           </div>
           
-          <button class="btn btn-primary" type="submit" (click)="toggleField()">
+          <button class="btn btn-primary"(click)="openModel()" type="submit" (click)="toggleField()">
             Save
           </button>
         </form>
+      </div>
+    </div>
+  </div>
+  <div class="modal" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+  
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Your Order is successful</h4>
+          <button type="button" class="btn-close"  (click)="CloseModel()" data-bs-dismiss="modal"></button>
+        </div>
+  
+        <!-- Modal body -->
+        <div class="modal-body">
+          your order id is{{orderId}}
+        </div>
+  
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" (click)="CloseModel()" data-bs-dismiss="modal">Close</button>
+        </div>
+  
       </div>
     </div>
   </div>

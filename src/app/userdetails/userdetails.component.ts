@@ -21,16 +21,18 @@ import { AngularFireAuth } from '@angular/fire/compat/auth';
 export class UserdetailsComponent implements OnInit{
   
  users: IUser[]=[];
+ orderId: string | undefined;
  showField: boolean = false;
 userForm!: FormGroup;
 currentUserUid: string | null = null;
+dataToSend: any;
 
 constructor(private fb: FormBuilder,private userServices: UserService,private router: Router,private activatedRoute:ActivatedRoute,private dataService: DataService,private db:AngularFireDatabase,private afAuth: AngularFireAuth){
   let uid=localStorage.getItem('users');
-   
+  this.orderId = this.generateorderID();
   this.userForm = this.fb.group({
     package_id:this.generateGUID(),
-    order_id:this.generateorderID(),
+    order_id:this.orderId,
     sender_name: new FormControl('',),
     sender_address: new FormControl('',),
     pincode_sender: new FormControl('',),
@@ -51,7 +53,19 @@ constructor(private fb: FormBuilder,private userServices: UserService,private ro
     },
   });
 }
-
+openModel(){
+  const modelDiv=document.getElementById('myModal');
+  if(modelDiv!=null){
+   modelDiv.style.display='block';
+  }
+}
+CloseModel(){
+ const modelDiv=document.getElementById('myModal');
+ if(modelDiv!=null){
+  modelDiv.style.display='none';
+ }
+ this.router.navigate(['userdetails'])
+}
 ngOnInit(): void {
  // throw new Error('Method not implemented.');
  
@@ -62,8 +76,10 @@ toggleField() {
 
 onSubmit(){
   //if(this.userForm.valid){
-    console.log(4)
+    //console.log(4)
       this.userServices.addDetail(this.userForm.value);
+      
+
       //this.router.navigate(['/orderdetails']);
       
     //this.router.navigate(['/admin']);
@@ -81,7 +97,7 @@ generateorderID():string {
   const timestamp = new Date().getTime();
   const randnum=Math.floor(Math.random()*10);
   const dataToSend= `OI${timestamp}${randnum}`;
-  this.dataService.setData(dataToSend);
+
   return dataToSend;
 }
 logout(){

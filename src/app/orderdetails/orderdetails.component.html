@@ -1,4 +1,36 @@
-<div *ngIf="data">
-    <h2>Data received:</h2>
-    <p>{{ data | json }}</p>
+<div class="container">
+  <div class="table-responsive">
+      <table class="order-table">
+          <thead>
+              <tr>
+                  <th>Order ID</th>
+                  <th>Sender Info</th>
+                  <th>Receiver Info</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr *ngFor="let order of orders">
+                  <td>{{ order.orderId }}</td>
+                  <td>
+                      <div class="sub-column">
+                          <div><strong>Name:</strong> {{ order.senderName }}</div>
+                          <div><strong>Address:</strong> {{ order.senderAddress }}</div>
+                          <div><strong>Pincode:</strong> {{ order.senderPincode }}</div>
+                          <div><strong>Email:</strong> {{ order.senderEmail }}</div>
+                          <div><strong>Contact Number:</strong> {{ order.senderContact }}</div>
+                      </div>
+                  </td>
+                  <td>
+                      <div class="sub-column">
+                          <div><strong>Name:</strong> {{ order.receiverName }}</div>
+                          <div><strong>Address:</strong> {{ order.receiverAddress }}</div>
+                          <div><strong>Pincode:</strong> {{ order.receiverPincode }}</div>
+                          <div><strong>Email:</strong> {{ order.receiverEmail }}</div>
+                          
+                      </div>
+                  </td>
+              </tr>
+          </tbody>
+      </table>
   </div>
+</div>
