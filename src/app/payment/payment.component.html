@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Courier Booking - Order Details</title>
+    <style>
+        @import url(//fonts.googleapis.com/css?family=Lato:300:400);
+
+        body {
+            margin: 0;
+            font-family: 'Lato', sans-serif;
+        }
+
+        h1 {
+            font-weight: 300;
+            letter-spacing: 2px;
+            font-size: 48px;
+            color: white;
+        }
+
+        p {
+            letter-spacing: 1px;
+            font-size: 14px;
+            color: #333333;
+        }
+
+        .header {
+            position: relative;
+            text-align: center;
+            background: linear-gradient(60deg, rgba(84, 58, 183, 1) 0%, rgba(0, 172, 193, 1) 100%);
+            color: white;
+        }
+
+        .inner-header {
+            height: 65vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .logo {
+            width: 50px;
+            fill: white;
+            padding-right: 15px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .waves {
+            position: relative;
+            width: 100%;
+            height: 15vh;
+            min-height: 100px;
+            max-height: 150px;
+            margin-bottom: -7px; /* Fix for safari gap */
+        }
+
+        .parallax > use {
+            animation: move-forever 25s cubic-bezier(.55, .5, .45, .5) infinite;
+        }
+
+        .parallax > use:nth-child(1) {
+            animation-delay: -2s;
+            animation-duration: 7s;
+        }
+
+        .parallax > use:nth-child(2) {
+            animation-delay: -3s;
+            animation-duration: 10s;
+        }
+
+        .parallax > use:nth-child(3) {
+            animation-delay: -4s;
+            animation-duration: 13s;
+        }
+
+        .parallax > use:nth-child(4) {
+            animation-delay: -5s;
+            animation-duration: 20s;
+        }
+
+        @keyframes move-forever {
+            0% {
+                transform: translate3d(-90px, 0, 0);
+            }
+            100% {
+                transform: translate3d(85px, 0, 0);
+            }
+        }
+
+        .container {
+            padding: 40px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+            max-width: 600px;
+            text-align: center;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #3498db;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .btn:hover {
+            background: #2980b9;
+            transform: translateY(-3px);
+        }
+
+        .btn:active {
+            transform: scale(0.96);
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <div class="inner-header flex">
+        <svg version="1.1" class="logo" baseProfile="tiny" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 500 500" xml:space="preserve">
+            <path fill="#FFFFFF" stroke="#000000" stroke-width="10" stroke-miterlimit="10" d="M57,283" />
+            <g>
+                <path fill="#fff" d="M250.4,0.8C112.7,0.8,1,112.4,1,250.2c0,137.7,111.7,249.4,249.4,249.4c137.7,0,249.4-111.7,249.4-249.4 C499.8,112.4,388.1,0.8,250.4,0.8z" />
+            </g>
+        </svg>
+        <h1>Courier Booking - Order Details</h1>
+    </div>
+
+    <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+        viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+            <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18 58 18 88 18 88-18 88 18 88 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+            <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7)" />
+            <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+            <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+            <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+        </g>
+    </svg>
+</div>
+
+<div class="container"*ngFor="let order of orders">
+    <div class="order-details" >
+        <h3>Sender Name:{{ order.senderName}}</h3>
+        <h3>Receiver Name:{{order.receiverName}}</h3>
+        <h3>Order Id:{{order.orderId}}</h3>
+    </div>
+    <button (click)="makePayment(10)">Pay Now</button>
+</div>
+
+</body>
+</html>
+

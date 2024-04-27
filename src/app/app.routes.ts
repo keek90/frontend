@@ -8,6 +8,7 @@ import { OrderdetailsComponent } from './orderdetails/orderdetails.component';
 import { AuthGuard } from './auth.guard';
 import { RegisterComponent } from './register/register.component';
 import { NgModule } from '@angular/core';
+import { PaymentComponent } from './payment/payment.component';
 
 export const routes: Routes = [
 {path: '',component:HomeComponent},
@@ -17,6 +18,7 @@ export const routes: Routes = [
 {path:'track',component:TrackComponent,canActivate: [AuthGuard]},
 {path: 'orderdetails',component:OrderdetailsComponent,canActivate: [AuthGuard]},
 {path:'register',component:RegisterComponent},
+{path:'payment',component:PaymentComponent},
 ];
 @NgModule({
     imports: [RouterModule.forRoot(routes)],

@@ -65,7 +65,7 @@ CloseModel(){
  if(modelDiv!=null){
   modelDiv.style.display='none';
  }
- this.router.navigate(['userdetails'])
+ this.router.navigate(['/payment'])
 }
 ngOnInit(): void {
  // throw new Error('Method not implemented.');
